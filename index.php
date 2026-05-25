@@ -193,3 +193,68 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <?= $errors['proyek'] ?? '' ?>
 
     </td>
+</tr>
+
+<tr>
+    <td>Jenis Asesmen</td>
+    <td>:</td>
+    <td>
+
+        <?php foreach($jenisList as $key => $label): ?>
+
+            <input
+            type="checkbox"
+            name="jenis[]"
+            value="<?= $key ?>"
+            <?= in_array($key, $checked) ? "checked" : "" ?>
+            onclick="return false;"
+            onkeydown="return false;"
+            style="accent-color: blue; cursor: default;">
+
+            <?= $label ?>
+
+            <br>
+
+        <?php endforeach; ?>
+
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>:</td>
+    <td>
+
+        <button type="submit" name="kirim">
+            Kirim
+        </button>
+
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+<a href="">Lihat Hasil Penilaian</a>
+
+<br><br>
+
+<?php if ($hasil): ?>
+    <?php foreach ([
+        'nim' => 'NIM',
+        'nama' => 'Nama',
+        'kelas' => 'Kelas',
+        'prodi' => 'Prodi',
+        'msgJenis' => 'Jenis Asesmen'
+    ] as $key => $label): ?>
+        <strong><?= $label ?> :</strong> <?= $hasil[$key] ?><br><br>
+    <?php endforeach; ?>
+    <strong>Nilai Akhir :</strong> <?= $hasil['nilaiAkhir'] ?><br><br>
+    <?= $hasil['nilaiAkhir'] >= 60 ? "Selamat Anda Lulus<br>Grade : " . $hasil['grade'] : "Maaf Anda Tidak Lulus" ?>
+<?php endif; ?>
+
+</center>
+</div>
+</body>
+</html>
