@@ -63,3 +63,68 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             'kelas' => $kelas,
             'prodi' => $prodi,
             'kehadiran' => $kehadiran,
+            'tugas' => $tugas,
+            'proyek' => $proyek,
+            'nilaiAkhir' => $nilaiAkhir,
+            'grade' => $grade,
+            'ket' => $ket,
+            'msgJenis' => $msgJenis,
+        ];
+    }
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style1.css">
+
+<title>Kalkulator Penilaian</title>
+
+</head>
+
+<body>
+
+<div style="padding-left:16px">
+
+<center>
+
+<h2>Kalkulator Penilaian</h2>
+
+<form method="POST" class="mb-4">
+
+<table style="width:70%; border-collapse: collapse;" border="1">
+
+<tr>
+    <td>Nama</td>
+    <td>:</td>
+    <td>
+        <input
+        type="text"
+        name="nama"
+        value="<?= $nama ?>"
+        placeholder="Masukkan nama"
+        required>
+    </td>
+</tr>
+
+<tr>
+    <td>NIM</td>
+    <td>:</td>
+    <td>
+        <input
+        type="number"
+        name="nim"
+        value="<?= $nim ?>"
+        required>
+    </td>
+</tr>
+
+<tr>
+    <td>Kelas</td>
+    <td>:</td>
+    <td>
