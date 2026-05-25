@@ -63,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             'kelas' => $kelas,
             'prodi' => $prodi,
             'kehadiran' => $kehadiran,
-                        'kehadiran' => $kehadiran,
             'tugas' => $tugas,
             'proyek' => $proyek,
             'nilaiAkhir' => $nilaiAkhir,
@@ -128,3 +127,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <tr>
     <td>Kelas</td>
     <td>:</td>
+    
