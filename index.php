@@ -128,3 +128,68 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <td>Kelas</td>
     <td>:</td>
     <td>
+        <input
+        type="text"
+        name="kelas"
+        value="<?= $kelas ?>"
+        placeholder="Masukkan kelas"
+        required>
+    </td>
+</tr>
+
+<tr>
+    <td>Prodi</td>
+    <td>:</td>
+    <td>
+        <input
+        type="text"
+        name="prodi"
+        value="<?= $prodi ?>"
+        placeholder="Masukkan prodi"
+        required>
+    </td>
+</tr>
+
+<tr>
+    <td>Kehadiran (20%)</td>
+    <td>:</td>
+    <td>
+
+        <input
+        type="number"
+        name="kehadiran"
+        value="<?= $kehadiran ?>"
+        required>
+        <?= $errors['kehadiran'] ?? '' ?>
+
+    </td>
+</tr>
+
+<tr>
+    <td>Tugas (25%)</td>
+    <td>:</td>
+    <td>
+
+        <input
+        type="number"
+        name="tugas"
+        value="<?= $tugas ?>"
+        required>
+        <?= $errors['tugas'] ?? '' ?>
+
+    </td>
+</tr>
+
+<tr>
+    <td>Project Akhir (55%)</td>
+    <td>:</td>
+    <td>
+
+        <input
+        type="number"
+        name="proyek"
+        value="<?= $proyek ?>"
+        required>
+        <?= $errors['proyek'] ?? '' ?>
+
+    </td>
